@@ -23,6 +23,7 @@
   }
 
   * { box-sizing: border-box; }
+
   body {
     margin: 0;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -30,7 +31,7 @@
     color: var(--text);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   header {
@@ -42,38 +43,27 @@
   header h1 { margin: 0; font-size: 1.4rem; }
   header p { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.9rem; }
 
-  .layout {
-    flex: 1;
+  main {
+    padding: 2rem;
     display: grid;
-    grid-template-columns: 280px 1fr;
-    overflow: hidden;
+    grid-template-columns: 1fr 380px;
+    gap: 2rem;
   }
 
-  nav {
-    background-color: var(--panel);
-    border-right: 1px solid var(--border);
-    overflow-y: auto;
-    padding: 1rem;
+  @media (max-width: 1024px) {
+    main { grid-template-columns: 1fr; }
   }
 
-  nav h2 {
-    font-size: 0.8rem;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .endpoint {
+  .endpoint-bar {
+    background: var(--gray-light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
     display: flex;
     align-items: center;
-    padding: 0.4rem 0.6rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.15s;
-    font-size: 0.9rem;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
   }
-  .endpoint:hover { background-color: var(--gray-light); }
 
   .method {
     font-size: 0.75rem;
@@ -83,16 +73,8 @@
     margin-right: 0.5rem;
     text-transform: uppercase;
   }
-  .GET { background-color: #ddf4ff; color: var(--blue); border: 1px solid #a5d8ff; }
-  .POST { background-color: #dafbe1; color: var(--green); border: 1px solid #8ddb8f; }
 
-  main {
-    overflow-y: auto;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 2rem;
-  }
+  .POST { background-color: #dafbe1; color: var(--green); border: 1px solid #8ddb8f; }
 
   code {
     background: var(--gray-light);
@@ -112,15 +94,19 @@
     font-size: 0.85rem;
   }
 
-  .endpoint-bar {
-    background: var(--gray-light);
+  h1, h2, h3 { color: var(--text); margin-top: 1.5rem; }
+
+  .param {
+    margin-bottom: 0.4rem;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+  }
+
+  .monaco-shell {
     border: 1px solid var(--border);
     border-radius: 6px;
-    padding: 0.75rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem 0 1.5rem;
+    height: 220px;
+    overflow: hidden;
   }
 
   .right-panel { display: flex; flex-direction: column; gap: 1.25rem; }
@@ -150,18 +136,7 @@
     cursor: pointer;
   }
 
-  .param {
-    margin-bottom: 0.4rem;
-    font-family: var(--mono);
-    font-size: 0.85rem;
-  }
-
-  .monaco-shell {
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    height: 220px;
-    overflow: hidden;
-  }
+  .btn:hover { background: #0556b6; }
 
   .response-statuses span {
     display: inline-block;
@@ -172,12 +147,9 @@
     padding: 0.1rem 0.4rem;
     color: white;
   }
+
   .status-200 { background: var(--green); }
   .status-400 { background: var(--red); }
-
-  @media (max-width: 1024px) {
-    main { grid-template-columns: 1fr; }
-  }
 </style>
 </head>
 <body>
@@ -186,55 +158,48 @@
   <p>Example POST request with path params, query params, and JSON payload</p>
 </header>
 
-<div class="layout">
-  <nav>
-    <h2>Projects</h2>
-    <div class="endpoint"><span class="method GET">GET</span> /projects</div>
-    <div class="endpoint"><span class="method POST">POST</span> /projects/{projectId}/resources</div>
-  </nav>
+<main>
+  <section>
+    <h1>Create a Project Resource</h1>
+    <div class="endpoint-bar">
+      <span class="method POST">POST</span>
+      <code>https://api.example.com/projects/{projectId}/resources?type=server</code>
+    </div>
 
-  <main>
-    <section>
-      <h1>Create a Project Resource</h1>
-      <div class="endpoint-bar">
-        <span class="method POST">POST</span>
-        <code>https://api.example.com/projects/{projectId}/resources?type=server</code>
-      </div>
+    <p>Create a new resource under an existing project. You can specify resource details and tags in the JSON body.</p>
 
-      <p>Create a new resource under an existing project. You can specify resource details and tags in the JSON body.</p>
+    <h2>Request</h2>
+    <h3>Path Parameters</h3>
+    <div class="param"><code>projectId</code> <em>string</em> — ID of the project to which this resource will be added.</div>
 
-      <h2>Request</h2>
-      <h3>Path Parameters</h3>
-      <div class="param"><code>projectId</code> <em>string</em> — ID of the project to which this resource will be added.</div>
+    <h3>Query Parameters</h3>
+    <div class="param"><code>type</code> <em>string</em> — The resource type (e.g. <code>server</code>, <code>database</code>).</div>
+    <div class="param"><code>autoStart</code> <em>boolean</em> — Whether the resource should auto-start on creation.</div>
 
-      <h3>Query Parameters</h3>
-      <div class="param"><code>type</code> <em>string</em> — The resource type (e.g. <code>server</code>, <code>database</code>).</div>
-      <div class="param"><code>autoStart</code> <em>boolean</em> — Whether the resource should auto-start on creation.</div>
+    <h3>Request Body</h3>
+    <div id="reqEditor" class="monaco-shell"></div>
 
-      <h3>Request Body</h3>
-      <div id="reqEditor" class="monaco-shell"></div>
+    <h2>Responses</h2>
+    <div class="response-statuses">
+      <span class="status-200">201 Created</span>
+      <span class="status-400">400 Bad Request</span>
+    </div>
 
-      <h2>Responses</h2>
-      <div class="response-statuses">
-        <span class="status-200">201 Created</span>
-        <span class="status-400">400 Bad Request</span>
-      </div>
+    <h3>Response Body</h3>
+    <div id="resEditor" class="monaco-shell"></div>
+  </section>
 
-      <h3>Response Body</h3>
-      <div id="resEditor" class="monaco-shell"></div>
-    </section>
+  <aside class="right-panel">
+    <!--div class="card">
+      <h4>Parameters</h4>
+      <div class="param"><strong>projectId*</strong> : string</div>
+      <div class="param"><strong>type*</strong> : string</div>
+      <div class="param"><strong>autoStart</strong> : boolean</div>
+    </div-->
 
-    <aside class="right-panel">
-      <div class="card">
-        <h4>Parameters</h4>
-        <div class="param"><strong>projectId*</strong> : string</div>
-        <div class="param"><strong>type*</strong> : string</div>
-        <div class="param"><strong>autoStart</strong> : boolean</div>
-      </div>
-
-      <div class="card">
-        <h4>Request Sample (cURL)</h4>
-        <pre>curl --request POST \
+    <div class="card">
+      <h4>Request Sample (cURL)</h4>
+      <pre>curl --request POST \
 --url 'https://api.example.com/projects/123/resources?type=server&autoStart=true' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -242,10 +207,9 @@
   "region": "us-east-1",
   "tags": ["production", "critical"]
 }'</pre>
-      </div>
-    </aside>
-  </main>
-</div>
+    </div>
+  </aside>
+</main>
 
 <script>
   window.require.config({
@@ -280,6 +244,5 @@
     });
   });
 </script>
-
 </body>
 </html>
