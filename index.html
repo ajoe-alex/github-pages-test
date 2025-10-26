@@ -243,6 +243,25 @@
       theme: 'vs-light'
     });
   });
+
+  window.addEventListener("load", () => {
+  const height = document.body.scrollHeight;
+  window.parent.postMessage(
+    { type: "IFRAME_HEIGHT", height },
+    "*"
+  ); // replace "*" with parent origin if known for security
+});
+
+// Optional: observe DOM changes to update height dynamically
+const observer = new ResizeObserver(() => {
+  const height = document.body.scrollHeight;
+  window.parent.postMessage(
+    { id: "aq_content" , type: "IFRAME_HEIGHT", height },
+    "*"
+  );
+});
+observer.observe(document.body);
+
 </script>
 </body>
 </html>
