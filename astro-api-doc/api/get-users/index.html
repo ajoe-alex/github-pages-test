@@ -1,32 +1,165 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.15.4"><title>Get Users | API Documentation</title><style>:root{--bg: #ffffff;--panel: #f9fafb;--border: #d0d7de;--text: #1f2328;--muted: #57606a;--blue: #0969da;--green: #1a7f37;--orange: #bf8700;--red: #cf222e;--purple: #8250df;--gray-light: #f3f4f6;--mono: ui-monospace, SFMono-Regular, Consolas, monospace}html,body{margin:0;width:100%;min-height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}*{box-sizing:border-box}.site-header{background-color:var(--panel);border-bottom:1px solid var(--border);padding:1rem 2rem}.header-content{max-width:1100px;margin:0 auto}.logo{color:var(--text);text-decoration:none;font-weight:700;font-size:1.25rem}.logo:hover{color:var(--blue)}main{max-width:1100px;margin:0 auto;padding:2.5rem}
-</style>
-<link rel="stylesheet" href="./_slug_.CSQ1F2Ja.css"></head> <body> <header class="site-header"> <div class="header-content"> <a href="/" class="logo">API Documentation</a> </div> </header> <main>  <article class="api-doc" data-astro-cid-ccwuwaab> <header class="api-header" data-astro-cid-ccwuwaab> <p class="api-description" data-astro-cid-ccwuwaab>Retrieves a list of all users from the system with optional filtering and pagination support.</p> </header> <div class="endpoint-bar" data-astro-cid-ccwuwaab> <span class="method method-get" data-astro-cid-ccwuwaab>GET</span> <code class="endpoint-url" data-astro-cid-ccwuwaab>https://api.example.com/v1/users</code> </div> <div class="rendered-content" data-astro-cid-ccwuwaab><h1>Get Users</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>Retrieves a list of all users from the system with optional filtering and pagination support.</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="generator" content="Astro v5.15.4">
+  <title>Get Users | API Documentation</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --panel: #f9fafb;
+      --border: #d0d7de;
+      --text: #1f2328;
+      --muted: #57606a;
+      --blue: #0969da;
+      --green: #1a7f37;
+      --orange: #bf8700;
+      --red: #cf222e;
+      --purple: #8250df;
+      --gray-light: #f3f4f6;
+      --mono: ui-monospace, SFMono-Regular, Consolas, monospace
+    }
 
-<h2>Endpoint</h2>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.6
+    }
 
-<strong>GET</strong> <code>https://api.example.com/v1/users</code>
+    * {
+      box-sizing: border-box
+    }
 
-<h2>Request Headers</h2>
+    .site-header {
+      background-color: var(--panel);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem
+    }
 
-<table><thead><tr><th>Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Authorization</code></td><td><code>Bearer <access_token></code></td></tr><tr><td><code>Accept</code></td><td><code>application/json</code></td></tr></tbody></table>
+    .header-content {
+      max-width: 1100px;
+      margin: 0 auto
+    }
 
-<h2>Parameters</h2>
+    .logo {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.25rem
+    }
+
+    .logo:hover {
+      color: var(--blue)
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem
+    }
+
+    .api-doc[data-astro-cid-ccwuwaab]{max-width:100%}.api-header[data-astro-cid-ccwuwaab]{margin-bottom:1rem}.api-description[data-astro-cid-ccwuwaab]{margin:0;color:var(--muted);font-size:.95rem}.endpoint-bar[data-astro-cid-ccwuwaab]{background:var(--gray-light);border:1px solid var(--border);border-radius:6px;padding:.8rem 1rem;display:flex;align-items:center;gap:.8rem;margin:1.5rem 0}.method[data-astro-cid-ccwuwaab]{font-size:.8rem;font-weight:700;text-transform:uppercase;padding:.25rem .6rem;border-radius:4px}.method-get[data-astro-cid-ccwuwaab]{background-color:#dafbe1;color:var(--green);border:1px solid #8ddb8f}.method-post[data-astro-cid-ccwuwaab]{background-color:#ddf4ff;color:var(--blue);border:1px solid #80ccff}.method-put[data-astro-cid-ccwuwaab]{background-color:#fff8c5;color:var(--orange);border:1px solid #d4a72c}.method-patch[data-astro-cid-ccwuwaab]{background-color:#fbefff;color:var(--purple);border:1px solid #c297eb}.method-delete[data-astro-cid-ccwuwaab]{background-color:#ffebe9;color:var(--red);border:1px solid #ff8182}.endpoint-url[data-astro-cid-ccwuwaab]{font-family:var(--mono);font-size:.95rem;background:transparent;padding:0;color:var(--text)}.rendered-content[data-astro-cid-ccwuwaab]{color:var(--text);line-height:1.6}.rendered-content[data-astro-cid-ccwuwaab] h1{font-size:1.6rem;color:var(--text);margin:0 0 1.5rem;border-bottom:1px solid var(--border);padding-bottom:.5rem}.rendered-content[data-astro-cid-ccwuwaab] h2{font-size:1.25rem;color:var(--text);margin:2rem 0 1rem}.rendered-content[data-astro-cid-ccwuwaab] h3{font-size:1.1rem;color:var(--text);margin:1.5rem 0 .75rem}.rendered-content[data-astro-cid-ccwuwaab] p{margin:.75rem 0;color:var(--text)}.rendered-content[data-astro-cid-ccwuwaab] strong{color:var(--text);font-weight:600}.rendered-content[data-astro-cid-ccwuwaab] hr{border:none;border-top:1px solid var(--border);margin:2rem 0}.rendered-content[data-astro-cid-ccwuwaab] code{background:var(--gray-light);border-radius:4px;padding:.15rem .35rem;font-family:var(--mono);font-size:.9rem;color:var(--text)}.rendered-content[data-astro-cid-ccwuwaab] table{width:100%;border-collapse:collapse;margin:1rem 0;border:1px solid var(--border);border-radius:6px;overflow:hidden}.rendered-content[data-astro-cid-ccwuwaab] th,.rendered-content[data-astro-cid-ccwuwaab] td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid var(--border)}.rendered-content[data-astro-cid-ccwuwaab] th{background-color:var(--gray-light);color:var(--text);font-weight:600;font-size:.875rem}.rendered-content[data-astro-cid-ccwuwaab] td{color:var(--text);background:var(--bg)}.rendered-content[data-astro-cid-ccwuwaab] td code{background-color:var(--gray-light)}.rendered-content[data-astro-cid-ccwuwaab] ul{margin:1rem 0;padding-left:1.5rem}.rendered-content[data-astro-cid-ccwuwaab] li{margin:.4rem 0;color:var(--text)}.rendered-content[data-astro-cid-ccwuwaab] .code-block{border:1px solid var(--border);border-radius:6px;overflow:hidden;margin:1rem 0;background:var(--panel)}.rendered-content[data-astro-cid-ccwuwaab] .code-header{display:flex;justify-content:space-between;align-items:center;padding:.5rem 1rem;background:var(--gray-light);border-bottom:1px solid var(--border)}.rendered-content[data-astro-cid-ccwuwaab] .code-header .lang{color:var(--muted);font-size:.75rem;text-transform:uppercase;font-weight:600}.rendered-content[data-astro-cid-ccwuwaab] .copy-btn{background:var(--blue);color:#fff;border:none;border-radius:4px;padding:.3rem .6rem;font-size:.75rem;cursor:pointer}.rendered-content[data-astro-cid-ccwuwaab] .copy-btn:hover{background:#0556b6}.rendered-content[data-astro-cid-ccwuwaab] pre{margin:0;padding:1rem;overflow-x:auto;background:var(--panel)}.rendered-content[data-astro-cid-ccwuwaab] pre code{background:none;padding:0;color:var(--text);font-size:.875rem;line-height:1.6;white-space:pre}.rendered-content[data-astro-cid-ccwuwaab] em{color:var(--muted);font-style:italic}.interactive-section[data-astro-cid-ccwuwaab]{margin-top:2rem;border:2px solid var(--blue);border-radius:8px;background:var(--bg);padding:1.5rem;box-shadow:0 0 15px #0969da26}.interactive-section[data-astro-cid-ccwuwaab] h2[data-astro-cid-ccwuwaab]{display:flex;align-items:center;gap:.6rem;font-size:1.2rem;color:var(--blue);margin:0 0 1.5rem}.gear-svg[data-astro-cid-ccwuwaab]{color:var(--blue);animation:spin 4s linear infinite}@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.editable-group[data-astro-cid-ccwuwaab]{border:1px solid var(--border);border-radius:6px;padding:1rem;margin-bottom:1rem;background:var(--panel)}.editable-group[data-astro-cid-ccwuwaab] h4[data-astro-cid-ccwuwaab]{margin:0 0 1rem;color:var(--blue);font-size:.95rem}.editable-field[data-astro-cid-ccwuwaab]{display:flex;flex-direction:column;margin-bottom:.8rem}.editable-field[data-astro-cid-ccwuwaab]:last-child{margin-bottom:0}.editable-field[data-astro-cid-ccwuwaab] label[data-astro-cid-ccwuwaab]{font-weight:600;margin-bottom:.3rem;font-size:.9rem;color:var(--text)}.field-type[data-astro-cid-ccwuwaab]{font-weight:400;color:var(--muted);font-size:.8rem}.required[data-astro-cid-ccwuwaab]{color:var(--red);margin-left:.25rem}.editable-field[data-astro-cid-ccwuwaab] input[data-astro-cid-ccwuwaab]{padding:.5rem .75rem;border:1px solid var(--border);border-radius:4px;font-family:var(--mono);font-size:.9rem;background:var(--bg);color:var(--text);transition:border .2s ease,box-shadow .2s ease}.editable-field[data-astro-cid-ccwuwaab] input[data-astro-cid-ccwuwaab]:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 2px #0969da33}.editable-field[data-astro-cid-ccwuwaab] input[data-astro-cid-ccwuwaab]::placeholder{color:var(--muted)}.curl-block[data-astro-cid-ccwuwaab]{margin-top:1.5rem;border:1px solid var(--border);border-radius:6px;background:var(--panel);overflow:hidden}.curl-block[data-astro-cid-ccwuwaab] h4[data-astro-cid-ccwuwaab]{margin:0;font-size:.95rem;background:var(--gray-light);padding:.8rem 1rem;border-bottom:1px solid var(--border);color:var(--text)}.curl-block[data-astro-cid-ccwuwaab] pre[data-astro-cid-ccwuwaab]{margin:0;padding:1rem;font-family:var(--mono);font-size:.875rem;line-height:1.6;overflow-x:auto;white-space:pre-wrap;word-break:break-all;color:var(--text)}.curl-block[data-astro-cid-ccwuwaab] .copy-btn[data-astro-cid-ccwuwaab]{display:inline-block;background:var(--blue);color:#fff;border:none;border-radius:4px;padding:.4rem .8rem;font-size:.85rem;cursor:pointer;margin:1rem}.curl-block[data-astro-cid-ccwuwaab] .copy-btn[data-astro-cid-ccwuwaab]:hover{background:#0556b6}
+
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-content"> <a href="/" class="logo">API Documentation</a> </div>
+  </header>
+  <main>
+    <article class="api-doc" data-astro-cid-ccwuwaab>
+      <header class="api-header" data-astro-cid-ccwuwaab>
+        <p class="api-description" data-astro-cid-ccwuwaab>Retrieves a list of all users from the system with optional
+          filtering and pagination support.</p>
+      </header>
+      <div class="endpoint-bar" data-astro-cid-ccwuwaab> <span class="method method-get"
+          data-astro-cid-ccwuwaab>GET</span> <code class="endpoint-url"
+          data-astro-cid-ccwuwaab>https://api.example.com/v1/users</code> </div>
+      <div class="rendered-content" data-astro-cid-ccwuwaab>
+        <h1>Get Users</h1>
+
+        <p>Retrieves a list of all users from the system with optional filtering and pagination support.</p>
+
+        <h2>Endpoint</h2>
+
+        <strong>GET</strong> <code>https://api.example.com/v1/users</code>
+
+        <h2>Request Headers</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Header</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>Authorization</code></td>
+              <td><code>Bearer <access_token></code></td>
+            </tr>
+            <tr>
+              <td><code>Accept</code></td>
+              <td><code>application/json</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Parameters</h2>
 
 
 
-<h3>Query Parameters</h3>
+        <h3>Query Parameters</h3>
 
-<table><thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>page</code></td><td>number</td><td>No</td><td>Page number (default: 1)</td></tr><tr><td><code>limit</code></td><td>number</td><td>No</td><td>Number of results per page (default: 10)</td></tr><tr><td><code>status</code></td><td>string</td><td>No</td><td>Filter by user status (active, inactive, pending)</td></tr></tbody></table>
+        <table>
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>page</code></td>
+              <td>number</td>
+              <td>No</td>
+              <td>Page number (default: 1)</td>
+            </tr>
+            <tr>
+              <td><code>limit</code></td>
+              <td>number</td>
+              <td>No</td>
+              <td>Number of results per page (default: 10)</td>
+            </tr>
+            <tr>
+              <td><code>status</code></td>
+              <td>string</td>
+              <td>No</td>
+              <td>Filter by user status (active, inactive, pending)</td>
+            </tr>
+          </tbody>
+        </table>
 
 
 
-<h2>Responses</h2>
+        <h2>Responses</h2>
 
-<h3>200 - Success</h3>
+        <h3>200 - Success</h3>
 
-<div class="code-block response-block"><div class="code-header"><span class="lang">json</span></div><pre><code>{
+        <div class="code-block response-block">
+          <div class="code-header"><span class="lang">json</span></div>
+          <pre><code>{
   "success": true,
   "data": {
     "users": [
@@ -53,11 +186,14 @@
     }
   }
 }
-</code></pre></div>
+</code></pre>
+        </div>
 
-<h3>500 - Internal Server Error</h3>
+        <h3>500 - Internal Server Error</h3>
 
-<div class="code-block response-block"><div class="code-header"><span class="lang">json</span></div><pre><code>{
+        <div class="code-block response-block">
+          <div class="code-header"><span class="lang">json</span></div>
+          <pre><code>{
   "success": false,
   "error": {
     "code": "INTERNAL_SERVER_ERROR",
@@ -65,65 +201,120 @@
     "requestId": "req_abc123xyz"
   }
 }
-</code></pre></div>
+</code></pre>
+        </div>
 
 
 
-<h2>Use Cases</h2>
+        <h2>Use Cases</h2>
 
-<ul><li>Fetching user lists for admin dashboards</li>
-<li>Populating user selection dropdowns</li>
-<li>User search and filtering functionality</li>
-<p></ul></p>
-<h2>Notes</h2>
+        <ul>
+          <li>Fetching user lists for admin dashboards</li>
+          <li>Populating user selection dropdowns</li>
+          <li>User search and filtering functionality</li>
+          <p>
+        </ul>
+        </p>
+        <h2>Notes</h2>
 
-<ul><li>Results are sorted by creation date (newest first)</li>
-<li>Maximum limit is 100 results per page</li>
-<li>Inactive users are excluded by default unless explicitly requested</li>
-<p></ul></p>
-<hr />
+        <ul>
+          <li>Results are sorted by creation date (newest first)</li>
+          <li>Maximum limit is 100 results per page</li>
+          <li>Inactive users are excluded by default unless explicitly requested</li>
+          <p>
+        </ul>
+        </p>
+        <hr />
 
 
-</div> <!-- Interactive Section --> <section class="interactive-section" data-astro-cid-ccwuwaab> <h2 data-astro-cid-ccwuwaab> <svg class="gear-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-ccwuwaab> <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-ccwuwaab></path> <path d="M12.9046 3.06005C12.6988 3 12.4659 3 12 3C11.5341 3 11.3012 3 11.0954 3.06005C10.7942 3.14794 10.5281 3.32808 10.3346 3.57511C10.2024 3.74388 10.1159 3.96016 9.94291 4.39272C9.69419 5.01452 9.00393 5.33471 8.36857 5.123L7.79779 4.93281C7.3929 4.79785 7.19045 4.73036 6.99196 4.7188C6.70039 4.70181 6.4102 4.77032 6.15701 4.9159C5.98465 5.01501 5.83376 5.16591 5.53197 5.4677C5.21122 5.78845 5.05084 5.94882 4.94896 6.13189C4.79927 6.40084 4.73595 6.70934 4.76759 7.01551C4.78912 7.2239 4.87335 7.43449 5.04182 7.85566C5.30565 8.51523 5.05184 9.26878 4.44272 9.63433L4.16521 9.80087C3.74031 10.0558 3.52786 10.1833 3.37354 10.3588C3.23698 10.5141 3.13401 10.696 3.07109 10.893C3 11.1156 3 11.3658 3 11.8663C3 12.4589 3 12.7551 3.09462 13.0088C3.17823 13.2329 3.31422 13.4337 3.49124 13.5946C3.69158 13.7766 3.96395 13.8856 4.50866 14.1035C5.06534 14.3261 5.35196 14.9441 5.16236 15.5129L4.94721 16.1584C4.79819 16.6054 4.72367 16.829 4.7169 17.0486C4.70875 17.3127 4.77049 17.5742 4.89587 17.8067C5.00015 18.0002 5.16678 18.1668 5.5 18.5C5.83323 18.8332 5.99985 18.9998 6.19325 19.1041C6.4258 19.2295 6.68733 19.2913 6.9514 19.2831C7.17102 19.2763 7.39456 19.2018 7.84164 19.0528L8.36862 18.8771C9.00393 18.6654 9.6942 18.9855 9.94291 19.6073C10.1159 20.0398 10.2024 20.2561 10.3346 20.4249C10.5281 20.6719 10.7942 20.8521 11.0954 20.94C11.3012 21 11.5341 21 12 21C12.4659 21 12.6988 21 12.9046 20.94C13.2058 20.8521 13.4719 20.6719 13.6654 20.4249C13.7976 20.2561 13.8841 20.0398 14.0571 19.6073C14.3058 18.9855 14.9961 18.6654 15.6313 18.8773L16.1579 19.0529C16.605 19.2019 16.8286 19.2764 17.0482 19.2832C17.3123 19.2913 17.5738 19.2296 17.8063 19.1042C17.9997 18.9999 18.1664 18.8333 18.4996 18.5001C18.8328 18.1669 18.9994 18.0002 19.1037 17.8068C19.2291 17.5743 19.2908 17.3127 19.2827 17.0487C19.2759 16.8291 19.2014 16.6055 19.0524 16.1584L18.8374 15.5134C18.6477 14.9444 18.9344 14.3262 19.4913 14.1035C20.036 13.8856 20.3084 13.7766 20.5088 13.5946C20.6858 13.4337 20.8218 13.2329 20.9054 13.0088C21 12.7551 21 12.4589 21 11.8663C21 11.3658 21 11.1156 20.9289 10.893C20.866 10.696 20.763 10.5141 20.6265 10.3588C20.4721 10.1833 20.2597 10.0558 19.8348 9.80087L19.5569 9.63416C18.9478 9.26867 18.6939 8.51514 18.9578 7.85558C19.1262 7.43443 19.2105 7.22383 19.232 7.01543C19.2636 6.70926 19.2003 6.40077 19.0506 6.13181C18.9487 5.94875 18.7884 5.78837 18.4676 5.46762C18.1658 5.16584 18.0149 5.01494 17.8426 4.91583C17.5894 4.77024 17.2992 4.70174 17.0076 4.71872C16.8091 4.73029 16.6067 4.79777 16.2018 4.93273L15.6314 5.12287C14.9961 5.33464 14.3058 5.0145 14.0571 4.39272C13.8841 3.96016 13.7976 3.74388 13.6654 3.57511C13.4719 3.32808 13.2058 3.14794 12.9046 3.06005Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-ccwuwaab></path> </svg>
-Interactive Section
-</h2>  <div class="editable-group" data-astro-cid-ccwuwaab> <h4 data-astro-cid-ccwuwaab>Query Parameters</h4> <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>page <span class="field-type" data-astro-cid-ccwuwaab>(number)</span></label> <input type="text" data-param-type="query" data-param-name="page" value="1" placeholder="Page number (default: 1)" data-astro-cid-ccwuwaab> </div><div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>limit <span class="field-type" data-astro-cid-ccwuwaab>(number)</span></label> <input type="text" data-param-type="query" data-param-name="limit" value="10" placeholder="Number of results per page (default: 10)" data-astro-cid-ccwuwaab> </div><div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>status <span class="field-type" data-astro-cid-ccwuwaab>(string)</span></label> <input type="text" data-param-type="query" data-param-name="status" value="active" placeholder="Filter by user status (active, inactive, pending)" data-astro-cid-ccwuwaab> </div> </div> <div class="editable-group" data-astro-cid-ccwuwaab> <h4 data-astro-cid-ccwuwaab>Headers</h4> <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>Authorization</label> <input type="text" data-param-type="header" data-param-name="Authorization" value="Bearer <access_token>" placeholder="Bearer <access_token>" data-astro-cid-ccwuwaab> </div><div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>Accept</label> <input type="text" data-param-type="header" data-param-name="Accept" value="application/json" placeholder="application/json" data-astro-cid-ccwuwaab> </div> </div>  <div class="curl-block" data-astro-cid-ccwuwaab> <h4 data-astro-cid-ccwuwaab>Request Sample (cURL)</h4> <pre id="curl-output" data-astro-cid-ccwuwaab>curl -X GET &quot;https://api.example.com/v1/users?page=${{page}}&amp;limit=${{limit}}&amp;status=${{status}}&quot; \
+      </div> <!-- Interactive Section -->
+      <section class="interactive-section" data-astro-cid-ccwuwaab>
+        <h2 data-astro-cid-ccwuwaab> <svg class="gear-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg" data-astro-cid-ccwuwaab>
+            <path
+              d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-astro-cid-ccwuwaab></path>
+            <path
+              d="M12.9046 3.06005C12.6988 3 12.4659 3 12 3C11.5341 3 11.3012 3 11.0954 3.06005C10.7942 3.14794 10.5281 3.32808 10.3346 3.57511C10.2024 3.74388 10.1159 3.96016 9.94291 4.39272C9.69419 5.01452 9.00393 5.33471 8.36857 5.123L7.79779 4.93281C7.3929 4.79785 7.19045 4.73036 6.99196 4.7188C6.70039 4.70181 6.4102 4.77032 6.15701 4.9159C5.98465 5.01501 5.83376 5.16591 5.53197 5.4677C5.21122 5.78845 5.05084 5.94882 4.94896 6.13189C4.79927 6.40084 4.73595 6.70934 4.76759 7.01551C4.78912 7.2239 4.87335 7.43449 5.04182 7.85566C5.30565 8.51523 5.05184 9.26878 4.44272 9.63433L4.16521 9.80087C3.74031 10.0558 3.52786 10.1833 3.37354 10.3588C3.23698 10.5141 3.13401 10.696 3.07109 10.893C3 11.1156 3 11.3658 3 11.8663C3 12.4589 3 12.7551 3.09462 13.0088C3.17823 13.2329 3.31422 13.4337 3.49124 13.5946C3.69158 13.7766 3.96395 13.8856 4.50866 14.1035C5.06534 14.3261 5.35196 14.9441 5.16236 15.5129L4.94721 16.1584C4.79819 16.6054 4.72367 16.829 4.7169 17.0486C4.70875 17.3127 4.77049 17.5742 4.89587 17.8067C5.00015 18.0002 5.16678 18.1668 5.5 18.5C5.83323 18.8332 5.99985 18.9998 6.19325 19.1041C6.4258 19.2295 6.68733 19.2913 6.9514 19.2831C7.17102 19.2763 7.39456 19.2018 7.84164 19.0528L8.36862 18.8771C9.00393 18.6654 9.6942 18.9855 9.94291 19.6073C10.1159 20.0398 10.2024 20.2561 10.3346 20.4249C10.5281 20.6719 10.7942 20.8521 11.0954 20.94C11.3012 21 11.5341 21 12 21C12.4659 21 12.6988 21 12.9046 20.94C13.2058 20.8521 13.4719 20.6719 13.6654 20.4249C13.7976 20.2561 13.8841 20.0398 14.0571 19.6073C14.3058 18.9855 14.9961 18.6654 15.6313 18.8773L16.1579 19.0529C16.605 19.2019 16.8286 19.2764 17.0482 19.2832C17.3123 19.2913 17.5738 19.2296 17.8063 19.1042C17.9997 18.9999 18.1664 18.8333 18.4996 18.5001C18.8328 18.1669 18.9994 18.0002 19.1037 17.8068C19.2291 17.5743 19.2908 17.3127 19.2827 17.0487C19.2759 16.8291 19.2014 16.6055 19.0524 16.1584L18.8374 15.5134C18.6477 14.9444 18.9344 14.3262 19.4913 14.1035C20.036 13.8856 20.3084 13.7766 20.5088 13.5946C20.6858 13.4337 20.8218 13.2329 20.9054 13.0088C21 12.7551 21 12.4589 21 11.8663C21 11.3658 21 11.1156 20.9289 10.893C20.866 10.696 20.763 10.5141 20.6265 10.3588C20.4721 10.1833 20.2597 10.0558 19.8348 9.80087L19.5569 9.63416C18.9478 9.26867 18.6939 8.51514 18.9578 7.85558C19.1262 7.43443 19.2105 7.22383 19.232 7.01543C19.2636 6.70926 19.2003 6.40077 19.0506 6.13181C18.9487 5.94875 18.7884 5.78837 18.4676 5.46762C18.1658 5.16584 18.0149 5.01494 17.8426 4.91583C17.5894 4.77024 17.2992 4.70174 17.0076 4.71872C16.8091 4.73029 16.6067 4.79777 16.2018 4.93273L15.6314 5.12287C14.9961 5.33464 14.3058 5.0145 14.0571 4.39272C13.8841 3.96016 13.7976 3.74388 13.6654 3.57511C13.4719 3.32808 13.2058 3.14794 12.9046 3.06005Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-astro-cid-ccwuwaab></path>
+          </svg>
+          Interactive Section
+        </h2>
+        <div class="editable-group" data-astro-cid-ccwuwaab>
+          <h4 data-astro-cid-ccwuwaab>Query Parameters</h4>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>page <span
+                class="field-type" data-astro-cid-ccwuwaab>(number)</span></label> <input type="text"
+              data-param-type="query" data-param-name="page" value="1" placeholder="Page number (default: 1)"
+              data-astro-cid-ccwuwaab> </div>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>limit <span
+                class="field-type" data-astro-cid-ccwuwaab>(number)</span></label> <input type="text"
+              data-param-type="query" data-param-name="limit" value="10"
+              placeholder="Number of results per page (default: 10)" data-astro-cid-ccwuwaab> </div>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>status <span
+                class="field-type" data-astro-cid-ccwuwaab>(string)</span></label> <input type="text"
+              data-param-type="query" data-param-name="status" value="active"
+              placeholder="Filter by user status (active, inactive, pending)" data-astro-cid-ccwuwaab> </div>
+        </div>
+        <div class="editable-group" data-astro-cid-ccwuwaab>
+          <h4 data-astro-cid-ccwuwaab>Headers</h4>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>Authorization</label>
+            <input type="text" data-param-type="header" data-param-name="Authorization" value="Bearer <access_token>"
+              placeholder="Bearer <access_token>" data-astro-cid-ccwuwaab> </div>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>Accept</label> <input
+              type="text" data-param-type="header" data-param-name="Accept" value="application/json"
+              placeholder="application/json" data-astro-cid-ccwuwaab> </div>
+        </div>
+        <div class="curl-block" data-astro-cid-ccwuwaab>
+          <h4 data-astro-cid-ccwuwaab>Request Sample (cURL)</h4>
+          <pre id="curl-output" data-astro-cid-ccwuwaab>curl -X GET &quot;https://api.example.com/v1/users?page=${{page}}&amp;limit=${{limit}}&amp;status=${{status}}&quot; \
   -H &quot;Authorization: Bearer ${{Authorization}}&quot; \
   -H &quot;Accept: application/json&quot;
-</pre> <button class="copy-btn" id="copy-curl-btn" data-astro-cid-ccwuwaab>Copy</button> </div> </section> </article>  </main> </body></html> <script>(function(){const interactiveData = {"method":"GET","request_url":"https://api.example.com/v1/users","headers":{"Authorization":"Bearer <access_token>","Accept":"application/json"},"parameters":{"query":{"page":{"type":"number","description":"Page number (default: 1)","default":"1"},"limit":{"type":"number","description":"Number of results per page (default: 10)","default":"10"},"status":{"type":"string","description":"Filter by user status (active, inactive, pending)","default":"active"}}},"curlContent":"curl -X GET \"https://api.example.com/v1/users?page=${{page}}&limit=${{limit}}&status=${{status}}\" \\\n  -H \"Authorization: Bearer ${{Authorization}}\" \\\n  -H \"Accept: application/json\"\n"};
+</pre> <button class="copy-btn" id="copy-curl-btn" data-astro-cid-ccwuwaab>Copy</button>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
 
-  // Get the curl template
-  const curlTemplate = interactiveData.curlContent;
+</html>
+<script>(function () {
+    const interactiveData = { "method": "GET", "request_url": "https://api.example.com/v1/users", "headers": { "Authorization": "Bearer <access_token>", "Accept": "application/json" }, "parameters": { "query": { "page": { "type": "number", "description": "Page number (default: 1)", "default": "1" }, "limit": { "type": "number", "description": "Number of results per page (default: 10)", "default": "10" }, "status": { "type": "string", "description": "Filter by user status (active, inactive, pending)", "default": "active" } } }, "curlContent": "curl -X GET \"https://api.example.com/v1/users?page=${{page}}&limit=${{limit}}&status=${{status}}\" \\\n  -H \"Authorization: Bearer ${{Authorization}}\" \\\n  -H \"Accept: application/json\"\n" };
 
-  // Update cURL by replacing ${{paramName}} placeholders with input values
-  function updateCurl() {
-    let curl = curlTemplate;
+    // Get the curl template
+    const curlTemplate = interactiveData.curlContent;
 
-    // Replace all parameters from inputs
+    // Update cURL by replacing ${{paramName}} placeholders with input values
+    function updateCurl() {
+      let curl = curlTemplate;
+
+      // Replace all parameters from inputs
+      document.querySelectorAll('.editable-field input').forEach(input => {
+        const name = input.getAttribute('data-param-name');
+        const value = input.value || input.placeholder || `<${name}>`;
+        // Replace ${{paramName}} pattern
+        const pattern = new RegExp('\\$\\{\\{' + name + '\\}\\}', 'g');
+        curl = curl.replace(pattern, value);
+      });
+
+      document.getElementById('curl-output').textContent = curl;
+    }
+
+    // Initialize curl with default values on page load
+    updateCurl();
+
+    // Add event listeners for live updates
     document.querySelectorAll('.editable-field input').forEach(input => {
-      const name = input.getAttribute('data-param-name');
-      const value = input.value || input.placeholder || `<${name}>`;
-      // Replace ${{paramName}} pattern
-      const pattern = new RegExp('\\$\\{\\{' + name + '\\}\\}', 'g');
-      curl = curl.replace(pattern, value);
+      input.addEventListener('input', updateCurl);
     });
 
-    document.getElementById('curl-output').textContent = curl;
-  }
-
-  // Initialize curl with default values on page load
-  updateCurl();
-
-  // Add event listeners for live updates
-  document.querySelectorAll('.editable-field input').forEach(input => {
-    input.addEventListener('input', updateCurl);
-  });
-
-  // Copy button
-  document.getElementById('copy-curl-btn').addEventListener('click', () => {
-    const curlText = document.getElementById('curl-output').textContent;
-    navigator.clipboard.writeText(curlText);
-    const btn = document.getElementById('copy-curl-btn');
-    btn.textContent = 'Copied!';
-    setTimeout(() => btn.textContent = 'Copy', 2000);
-  });
-})();</script> 
+    // Copy button
+    document.getElementById('copy-curl-btn').addEventListener('click', () => {
+      const curlText = document.getElementById('curl-output').textContent;
+      navigator.clipboard.writeText(curlText);
+      const btn = document.getElementById('copy-curl-btn');
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = 'Copy', 2000);
+    });
+  })();</script>
