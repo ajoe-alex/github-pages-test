@@ -120,11 +120,42 @@
 
         <h2>Parameters</h2>
 
-        <p>{{PATH_PARAMS}}</p>
-
-        <p>{{QUERY_PARAMS}}</p>
-
-        <p>{{BODY_PARAMS}}</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>userId</code></td>
+              <td>string</td>
+              <td>Yes</td>
+              <td>Unique identifier of the user to be updated</td>
+            </tr>
+            <tr>
+              <td><code>email</code></td>
+              <td>string</td>
+              <td>Yes</td>
+              <td>User's email address</td>
+            </tr>
+            <tr>
+              <td><code>name</code></td>
+              <td>string</td>
+              <td>Yes</td>
+              <td>User's full name</td>
+            </tr>
+            <tr>
+              <td><code>role</code></td>
+              <td>string</td>
+              <td>No</td>
+              <td>User role (admin, user, viewer). Default: user</td>
+            </tr>
+          </tbody>
+        </table>
 
         <h2>Responses</h2>
 
@@ -189,13 +220,26 @@
         </h2>
         <div class="editable-group" data-astro-cid-ccwuwaab>
           <h4 data-astro-cid-ccwuwaab>Parameters</h4>
-          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> body <span
-                class="field-type" data-astro-cid-ccwuwaab>()</span> </label> <input type="text" data-param-name="body"
-              value data-astro-cid-ccwuwaab> </div>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> userId <span
+                class="field-type" data-astro-cid-ccwuwaab>(string)</span> <span class="required"
+                data-astro-cid-ccwuwaab>*</span> </label> <input type="text" data-param-name="userId" value="12345"
+              placeholder="Unique identifier of the user to be updated" data-astro-cid-ccwuwaab> </div>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> email <span
+                class="field-type" data-astro-cid-ccwuwaab>(string)</span> <span class="required"
+                data-astro-cid-ccwuwaab>*</span> </label> <input type="text" data-param-name="email"
+              value="newuser@example.com" placeholder="User's email address" data-astro-cid-ccwuwaab> </div>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> name <span
+                class="field-type" data-astro-cid-ccwuwaab>(string)</span> <span class="required"
+                data-astro-cid-ccwuwaab>*</span> </label> <input type="text" data-param-name="name" value="New User"
+              placeholder="User's full name" data-astro-cid-ccwuwaab> </div>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> role <span
+                class="field-type" data-astro-cid-ccwuwaab>(string)</span> </label> <input type="text"
+              data-param-name="role" value="user" placeholder="User role (admin, user, viewer). Default: user"
+              data-astro-cid-ccwuwaab> </div>
         </div>
         <div class="curl-block" data-astro-cid-ccwuwaab>
           <h4 data-astro-cid-ccwuwaab>Request Sample (cURL)</h4>
-          <pre id="curl-output" data-astro-cid-ccwuwaab>curl -X PUT &quot;https://api.example.com/v1/users&quot; \
+          <pre id="curl-output" data-astro-cid-ccwuwaab>curl -X PUT &quot;https://api.example.com/v1/${{userId}}&quot; \
   -H &quot;Authorization: Bearer ${{Authorization}}&quot; \
   -H &quot;Content-Type: application/json&quot; \
   -H &quot;Accept: application/json&quot; \
@@ -213,7 +257,7 @@
 
 </html>
 <script>(function () {
-    const interactiveData = { "method": "PUT", "request_url": "https://api.example.com/v1/users/{userId}", "headers": { "Authorization": "Bearer <access_token>", "Content-Type": "application/json", "Accept": "application/json" }, "parameters": { "body": { "email": { "type": "string", "required": true, "description": "User's email address", "default": "newuser@example.com" }, "name": { "type": "string", "required": true, "description": "User's full name", "default": "New User" }, "role": { "type": "string", "required": false, "description": "User role (admin, user, viewer). Default: user", "default": "user" } } }, "curlContent": "curl -X PUT \"https://api.example.com/v1/users\" \\\n  -H \"Authorization: Bearer ${{Authorization}}\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json\" \\\n  -d '{\n    \"email\": \"${{email}}\",\n    \"name\": \"${{name}}\",\n    \"role\": \"${{role}}\"\n  }'\n" };
+    const interactiveData = { "method": "PUT", "request_url": "https://api.example.com/v1/users/{userId}", "headers": { "Authorization": "Bearer <access_token>", "Content-Type": "application/json", "Accept": "application/json" }, "parameters": { "userId": { "type": "string", "required": true, "description": "Unique identifier of the user to be updated", "default": "12345" }, "email": { "type": "string", "required": true, "description": "User's email address", "default": "newuser@example.com" }, "name": { "type": "string", "required": true, "description": "User's full name", "default": "New User" }, "role": { "type": "string", "required": false, "description": "User role (admin, user, viewer). Default: user", "default": "user" } }, "curlContent": "curl -X PUT \"https://api.example.com/v1/${{userId}}\" \\\n  -H \"Authorization: Bearer ${{Authorization}}\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json\" \\\n  -d '{\n    \"email\": \"${{email}}\",\n    \"name\": \"${{name}}\",\n    \"role\": \"${{role}}\"\n  }'\n" };
 
     // Get the curl template
     const curlTemplate = interactiveData.curlContent;
