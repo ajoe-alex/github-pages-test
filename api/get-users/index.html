@@ -116,42 +116,11 @@
 
         <h2>Parameters</h2>
 
+        <p>{{PATH_PARAMS}}</p>
 
+        <p>{{QUERY_PARAMS}}</p>
 
-        <h3>Query Parameters</h3>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Parameter</th>
-              <th>Type</th>
-              <th>Required</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>page</code></td>
-              <td>number</td>
-              <td>No</td>
-              <td>Page number (default: 1)</td>
-            </tr>
-            <tr>
-              <td><code>limit</code></td>
-              <td>number</td>
-              <td>No</td>
-              <td>Number of results per page (default: 10)</td>
-            </tr>
-            <tr>
-              <td><code>status</code></td>
-              <td>string</td>
-              <td>No</td>
-              <td>Filter by user status (active, inactive, pending)</td>
-            </tr>
-          </tbody>
-        </table>
-
-
+        <p>{{BODY_PARAMS}}</p>
 
         <h2>Responses</h2>
 
@@ -243,28 +212,10 @@
           Interactive Section
         </h2>
         <div class="editable-group" data-astro-cid-ccwuwaab>
-          <h4 data-astro-cid-ccwuwaab>Query Parameters</h4>
-          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>page <span
-                class="field-type" data-astro-cid-ccwuwaab>(number)</span></label> <input type="text"
-              data-param-type="query" data-param-name="page" value="1" placeholder="Page number (default: 1)"
-              data-astro-cid-ccwuwaab> </div>
-          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>limit <span
-                class="field-type" data-astro-cid-ccwuwaab>(number)</span></label> <input type="text"
-              data-param-type="query" data-param-name="limit" value="10"
-              placeholder="Number of results per page (default: 10)" data-astro-cid-ccwuwaab> </div>
-          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>status <span
-                class="field-type" data-astro-cid-ccwuwaab>(string)</span></label> <input type="text"
-              data-param-type="query" data-param-name="status" value="active"
-              placeholder="Filter by user status (active, inactive, pending)" data-astro-cid-ccwuwaab> </div>
-        </div>
-        <div class="editable-group" data-astro-cid-ccwuwaab>
-          <h4 data-astro-cid-ccwuwaab>Headers</h4>
-          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>Authorization</label>
-            <input type="text" data-param-type="header" data-param-name="Authorization" value="Bearer <access_token>"
-              placeholder="Bearer <access_token>" data-astro-cid-ccwuwaab> </div>
-          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab>Accept</label> <input
-              type="text" data-param-type="header" data-param-name="Accept" value="application/json"
-              placeholder="application/json" data-astro-cid-ccwuwaab> </div>
+          <h4 data-astro-cid-ccwuwaab>Parameters</h4>
+          <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> query <span
+                class="field-type" data-astro-cid-ccwuwaab>()</span> </label> <input type="text" data-param-name="query"
+              value data-astro-cid-ccwuwaab> </div>
         </div>
         <div class="curl-block" data-astro-cid-ccwuwaab>
           <h4 data-astro-cid-ccwuwaab>Request Sample (cURL)</h4>
