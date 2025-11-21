@@ -218,23 +218,26 @@
           <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> access_token <span
                 class="field-type" data-astro-cid-ccwuwaab>(string)</span> <span class="required"
                 data-astro-cid-ccwuwaab>*</span> </label> <input type="text" data-param-name="access_token"
-              value="asdadasda" placeholder="Access token of the user" data-astro-cid-ccwuwaab> </div>
+              data-default="asdadasda" value="asdadasda" placeholder="Access token of the user" data-astro-cid-ccwuwaab>
+          </div>
           <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> email <span
                 class="field-type" data-astro-cid-ccwuwaab>(string)</span> <span class="required"
                 data-astro-cid-ccwuwaab>*</span> </label> <input type="text" data-param-name="email"
-              value="newuser@example.com" placeholder="User's email address" data-astro-cid-ccwuwaab> </div>
+              data-default="newuser@example.com" value="newuser@example.com" placeholder="User's email address"
+              data-astro-cid-ccwuwaab> </div>
           <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> name <span
                 class="field-type" data-astro-cid-ccwuwaab>(string)</span> <span class="required"
-                data-astro-cid-ccwuwaab>*</span> </label> <input type="text" data-param-name="name" value="New User"
-              placeholder="User's full name" data-astro-cid-ccwuwaab> </div>
+                data-astro-cid-ccwuwaab>*</span> </label> <input type="text" data-param-name="name"
+              data-default="New User" value="New User" placeholder="User's full name" data-astro-cid-ccwuwaab> </div>
           <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> password <span
                 class="field-type" data-astro-cid-ccwuwaab>(string)</span> <span class="required"
                 data-astro-cid-ccwuwaab>*</span> </label> <input type="text" data-param-name="password"
-              value="securePassword123" placeholder="User's password (min 8 characters)" data-astro-cid-ccwuwaab> </div>
+              data-default="securePassword123" value="securePassword123"
+              placeholder="User's password (min 8 characters)" data-astro-cid-ccwuwaab> </div>
           <div class="editable-field" data-astro-cid-ccwuwaab> <label data-astro-cid-ccwuwaab> role <span
                 class="field-type" data-astro-cid-ccwuwaab>(string)</span> </label> <input type="text"
-              data-param-name="role" value="user" placeholder="User role (admin, user, viewer). Default: user"
-              data-astro-cid-ccwuwaab> </div>
+              data-param-name="role" data-default="user" value="user"
+              placeholder="User role (admin, user, viewer). Default: user" data-astro-cid-ccwuwaab> </div>
         </div>
         <div class="curl-block" data-astro-cid-ccwuwaab>
           <h4 data-astro-cid-ccwuwaab>Request Sample (cURL)</h4>
@@ -269,7 +272,8 @@
       // Replace all parameters from inputs
       document.querySelectorAll('.editable-field input').forEach(input => {
         const name = input.getAttribute('data-param-name');
-        const value = input.value || input.placeholder || `<${name}>`;
+        const defaultValue = input.getAttribute('data-default') || `<${name}>`;
+        const value = input.value || defaultValue;
         // Replace ${{paramName}} pattern
         const pattern = new RegExp('\\$\\{\\{' + name + '\\}\\}', 'g');
         curl = curl.replace(pattern, value);
